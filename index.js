@@ -4,6 +4,7 @@ import { load } from "js-yaml"
 
 const INPUT_FILE  = core.getInput('input_file') || './src/shorten.yaml';
 const BUILD_FOLDER  = core.getInput('output_folder') || './build';
+const CUSTOM_CNAME = core.getInput('custom_cname') || undefined;
 
 const template = (location) =>
   `<html><head><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><meta http-equiv="REFRESH" content="0;url=${location}"/></head><body></body></html>`;
@@ -23,6 +24,9 @@ if (fs.existsSync(BUILD_FOLDER)){
 fs.mkdirSync(BUILD_FOLDER);
 fs.writeFileSync(`${BUILD_FOLDER}/shorten.yaml`, linksText)
 fs.writeFileSync(`${BUILD_FOLDER}/index.html`, template("shorten.yaml"))
+if(CUSTOM_CNAME) {
+  fs.writeFileSync(`${BUILD_FOLDER}/CNAME`, CUSTOM_CNAME)
+}
 
 Object.entries(linksJson).forEach(([key, value]) => {
   const data = template(value)

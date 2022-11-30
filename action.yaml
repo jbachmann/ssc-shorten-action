@@ -10,6 +10,9 @@ inputs:
     description: 'Build output path'
     default: "./build"
     required: true
+  custom_cname:
+    description: 'Used to create a CNAME file for GH Pages'
+    required: false 
 runs:
   using: 'node16'
   main: 'index.js'
