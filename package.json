@@ -1,0 +1,26 @@
+{
+  "name": "ssc-shorten-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "argparse": "^2.0.1",
+    "js-yaml": "^4.1.0",
+    "tunnel": "^0.0.6",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbachmann/ssc-shorten-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbachmann/ssc-shorten-action/issues"
+  },
+  "homepage": "https://github.com/jbachmann/ssc-shorten-action#readme"
+}

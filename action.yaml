@@ -1,0 +1,15 @@
+name: 'SSC Shorten Expander'
+author: 'Jordan Bachmann'
+description: 'Expands YAML url pairs into static folder/file structure'
+inputs:
+  input_file:  # id of input
+    description: 'YAML file input path'
+    required: true
+    default: './src/shorten.yaml'
+  output_folder:
+    description: 'Build output path'
+    default: "./build"
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
