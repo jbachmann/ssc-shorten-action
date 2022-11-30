@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "argparse": "^2.0.1",
